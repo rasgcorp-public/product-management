@@ -22,7 +22,7 @@ logging:
 eureka:
   instance:
     prefer-ip-address: true
-    ip-address: ${}
+    ip-address: ${HOST_MACHINE_IP}
   client:
     service-url:
       defaultZone: http://admin:${jhipster.registry.password}@rsgconsole.net:8761/eureka/
