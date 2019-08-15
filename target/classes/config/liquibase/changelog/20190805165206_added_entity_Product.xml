@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+
+    <!--
+        Added the entity Product.
+    -->
+    <changeSet id="20190805165206-1" author="jhipster">
+        <createTable tableName="product">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="id_produto" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_recipiente" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="part_number" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tp_embalagem" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cnpj" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="id_dispositivo" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="unidade_estoque" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="naladincca" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ncm" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="naladish" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="linha_produto" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="peso_bruto" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="peso_liquido" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="registro_ms" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="validade" type="datetime">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="necessita_li" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="recof" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="reducao_icms" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_onu" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="seq_suframa" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="nao_tributavel" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ipi_especifico" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ii_especifico" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ii" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ipi" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="valor_unitaria" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="capacidade_unitaria" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="fator_conversao" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="descricao_resumida" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="atualizacao" type="datetime">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="status" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="unidade_peso" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_unidade_qtde" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_unidade_comercializada" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_unidade_unitaria" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="peso_quilo" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="peso_unid_comercializada" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_externo_gip" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ultimo_informante" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tsp" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tipo_recof" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="obs" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="peso_rateavel" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="necessita_revisao" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tipo_produto" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="procedencia" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="chassi" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="especificacao_tecnica" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="materia_prima_basica" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="automatico" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_origem" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="material_generico" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="carga_perigosa" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_unidade_venda" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_1" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_2" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_3" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="descricao_detalhada" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="id_organizacao" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_pais_origem" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ciclo_produtivo" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="part_number_fornecedor" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flag_atualiza_icms" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="id_dispositivo_ipi" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="codigo_moeda" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="valor_unitario" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_prod" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_producao" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="procedencia_exp" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="id_anuencia" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="peso_metro_cubico" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="hts" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="nome_comercial" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="id_modelo" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="unidade_fracionada" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="dif_peso_emb" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="class_prod_recof" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="data_inicio" type="datetime">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="data_fim" type="datetime">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="data_insert_mov" type="datetime">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="id_corporativo" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="data_ger_leg" type="datetime">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="procedencia_info" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_prod_suframa" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="px_exp_tipoins" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tipo_prod_suframa" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="id_detalhe_suframa" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="valor_unitario_real" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="necessita_revisao_pexpam" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="modelo" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="px_modelo_padrao" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_4" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_5" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_6" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_7" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_8" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_9" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_10" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_11" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="pis_cofins_tipo_aplic" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="pis" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cofins" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="pis_cofins_red_base" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="modelo_prod_suframa" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_siscomex_unidade_ncm" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="part_number_cliente" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="superficie_unitaria" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="local_estoque" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_unidade_superficie" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="rateio_produto_acabado" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="pis_cofins_cod_un_espec" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="recupera_impostos" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flag_no_raf" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="nota_compl_tipi" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ipi_reduzido" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="sujeito_lote" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="marca_comercial" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tipo_embalagem" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="num_liberacao_brasilia" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="temperatura_conservacao" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="umidade" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="luminosidade" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="embalagem_secundaria" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="forma_fisica" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="finalidade" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="item_produtivo_rc" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="embalagem_primaria" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="descricao_anvisa" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="volume" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_unidade_medida_dimensao" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_material" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ativo" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="codigo_aduana" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="classe_risco" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_risco" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_12" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_13" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_1_number" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_2_number" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_3_number" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_4_number" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_5_number" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="status_scansys" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cod_estrutura_atual" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="perc_tolerancia" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="pis_especifico" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="cofins_especifico" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_14" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_15" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_16" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_17" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_18" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_19" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_20" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_21" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_22" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_23" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_24" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_25" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_26" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_27" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_28" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_29" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_30" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_31" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_32" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="flex_field_33" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_cod_barras_gtin" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_vlr_unit_limite_usd" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_cod_prod_anp" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_custo_producao" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_destino" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_percentual_glp" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_loc_field_1" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_loc_field_2" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_loc_field_3" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_loc_field_4" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_loc_field_5" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_loc_field_6" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_loc_field_7" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_loc_field_8" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_1" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_2" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_3" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_4" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_5" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_id_doc_ocr" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_6" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_7" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_8" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_9" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_10" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_11" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_12" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_13" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_14" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_loc_field_15" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_cod_prod_anvisa" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_desc_prod_anp" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_perc_glp_nac" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_perc_glp_imp" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="n_valor_partida" type="double">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_gtin_unid_trib" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_codigo_modalidade" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_codigogpc" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_codigogpcbrick" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_codigounspsc" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_situacao" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_enviado" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_motivo_isencao_anvisa" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="s_ic_pronto_para_envio" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+
+        <dropDefaultValue tableName="product" columnName="validade" columnDataType="datetime"/>
+        <dropDefaultValue tableName="product" columnName="atualizacao" columnDataType="datetime"/>
+        <dropDefaultValue tableName="product" columnName="data_inicio" columnDataType="datetime"/>
+        <dropDefaultValue tableName="product" columnName="data_fim" columnDataType="datetime"/>
+        <dropDefaultValue tableName="product" columnName="data_insert_mov" columnDataType="datetime"/>
+        <dropDefaultValue tableName="product" columnName="data_ger_leg" columnDataType="datetime"/>
+    </changeSet>
+
+    <changeSet id="20190805165206-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20190805165206-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/product.csv"
+                  separator=";"
+                  tableName="product">
+            <column name="id" type="numeric"/>
+            <column name="id_produto" type="numeric"/>
+            <column name="cod_recipiente" type="string"/>
+            <column name="part_number" type="string"/>
+            <column name="tp_embalagem" type="string"/>
+            <column name="cnpj" type="string"/>
+            <column name="id_dispositivo" type="numeric"/>
+            <column name="unidade_estoque" type="string"/>
+            <column name="naladincca" type="string"/>
+            <column name="ncm" type="string"/>
+            <column name="naladish" type="string"/>
+            <column name="linha_produto" type="string"/>
+            <column name="peso_bruto" type="numeric"/>
+            <column name="peso_liquido" type="numeric"/>
+            <column name="registro_ms" type="string"/>
+            <column name="validade" type="datetime"/>
+            <column name="necessita_li" type="string"/>
+            <column name="recof" type="string"/>
+            <column name="reducao_icms" type="numeric"/>
+            <column name="cod_onu" type="string"/>
+            <column name="seq_suframa" type="string"/>
+            <column name="nao_tributavel" type="string"/>
+            <column name="ipi_especifico" type="string"/>
+            <column name="ii_especifico" type="string"/>
+            <column name="ii" type="numeric"/>
+            <column name="ipi" type="numeric"/>
+            <column name="valor_unitaria" type="numeric"/>
+            <column name="capacidade_unitaria" type="numeric"/>
+            <column name="fator_conversao" type="numeric"/>
+            <column name="descricao_resumida" type="string"/>
+            <column name="atualizacao" type="datetime"/>
+            <column name="status" type="string"/>
+            <column name="unidade_peso" type="string"/>
+            <column name="cod_unidade_qtde" type="string"/>
+            <column name="cod_unidade_comercializada" type="string"/>
+            <column name="cod_unidade_unitaria" type="string"/>
+            <column name="peso_quilo" type="numeric"/>
+            <column name="peso_unid_comercializada" type="numeric"/>
+            <column name="cod_externo_gip" type="string"/>
+            <column name="ultimo_informante" type="numeric"/>
+            <column name="tsp" type="string"/>
+            <column name="tipo_recof" type="string"/>
+            <column name="obs" type="string"/>
+            <column name="peso_rateavel" type="string"/>
+            <column name="necessita_revisao" type="string"/>
+            <column name="tipo_produto" type="string"/>
+            <column name="procedencia" type="string"/>
+            <column name="chassi" type="string"/>
+            <column name="especificacao_tecnica" type="string"/>
+            <column name="materia_prima_basica" type="string"/>
+            <column name="automatico" type="string"/>
+            <column name="cod_origem" type="string"/>
+            <column name="material_generico" type="string"/>
+            <column name="carga_perigosa" type="string"/>
+            <column name="cod_unidade_venda" type="string"/>
+            <column name="flex_field_1" type="string"/>
+            <column name="flex_field_2" type="string"/>
+            <column name="flex_field_3" type="string"/>
+            <column name="descricao_detalhada" type="string"/>
+            <column name="id_organizacao" type="numeric"/>
+            <column name="cod_pais_origem" type="string"/>
+            <column name="ciclo_produtivo" type="numeric"/>
+            <column name="part_number_fornecedor" type="string"/>
+            <column name="flag_atualiza_icms" type="string"/>
+            <column name="id_dispositivo_ipi" type="numeric"/>
+            <column name="codigo_moeda" type="string"/>
+            <column name="valor_unitario" type="numeric"/>
+            <column name="cod_prod" type="string"/>
+            <column name="cod_producao" type="string"/>
+            <column name="procedencia_exp" type="string"/>
+            <column name="id_anuencia" type="numeric"/>
+            <column name="peso_metro_cubico" type="numeric"/>
+            <column name="hts" type="string"/>
+            <column name="nome_comercial" type="string"/>
+            <column name="id_modelo" type="numeric"/>
+            <column name="unidade_fracionada" type="string"/>
+            <column name="dif_peso_emb" type="numeric"/>
+            <column name="class_prod_recof" type="string"/>
+            <column name="data_inicio" type="datetime"/>
+            <column name="data_fim" type="datetime"/>
+            <column name="data_insert_mov" type="datetime"/>
+            <column name="id_corporativo" type="string"/>
+            <column name="data_ger_leg" type="datetime"/>
+            <column name="procedencia_info" type="string"/>
+            <column name="cod_prod_suframa" type="string"/>
+            <column name="px_exp_tipoins" type="string"/>
+            <column name="tipo_prod_suframa" type="string"/>
+            <column name="id_detalhe_suframa" type="numeric"/>
+            <column name="valor_unitario_real" type="numeric"/>
+            <column name="necessita_revisao_pexpam" type="string"/>
+            <column name="modelo" type="numeric"/>
+            <column name="px_modelo_padrao" type="numeric"/>
+            <column name="flex_field_4" type="string"/>
+            <column name="flex_field_5" type="string"/>
+            <column name="flex_field_6" type="string"/>
+            <column name="flex_field_7" type="string"/>
+            <column name="flex_field_8" type="string"/>
+            <column name="flex_field_9" type="string"/>
+            <column name="flex_field_10" type="string"/>
+            <column name="flex_field_11" type="string"/>
+            <column name="pis_cofins_tipo_aplic" type="string"/>
+            <column name="pis" type="numeric"/>
+            <column name="cofins" type="numeric"/>
+            <column name="pis_cofins_red_base" type="numeric"/>
+            <column name="modelo_prod_suframa" type="string"/>
+            <column name="cod_siscomex_unidade_ncm" type="string"/>
+            <column name="part_number_cliente" type="string"/>
+            <column name="superficie_unitaria" type="numeric"/>
+            <column name="local_estoque" type="string"/>
+            <column name="cod_unidade_superficie" type="string"/>
+            <column name="rateio_produto_acabado" type="string"/>
+            <column name="pis_cofins_cod_un_espec" type="string"/>
+            <column name="recupera_impostos" type="string"/>
+            <column name="flag_no_raf" type="string"/>
+            <column name="nota_compl_tipi" type="string"/>
+            <column name="ipi_reduzido" type="numeric"/>
+            <column name="sujeito_lote" type="string"/>
+            <column name="marca_comercial" type="string"/>
+            <column name="tipo_embalagem" type="string"/>
+            <column name="num_liberacao_brasilia" type="string"/>
+            <column name="temperatura_conservacao" type="string"/>
+            <column name="umidade" type="string"/>
+            <column name="luminosidade" type="string"/>
+            <column name="embalagem_secundaria" type="string"/>
+            <column name="forma_fisica" type="string"/>
+            <column name="finalidade" type="string"/>
+            <column name="item_produtivo_rc" type="string"/>
+            <column name="embalagem_primaria" type="string"/>
+            <column name="descricao_anvisa" type="string"/>
+            <column name="volume" type="numeric"/>
+            <column name="cod_unidade_medida_dimensao" type="string"/>
+            <column name="cod_material" type="string"/>
+            <column name="ativo" type="string"/>
+            <column name="codigo_aduana" type="string"/>
+            <column name="classe_risco" type="string"/>
+            <column name="cod_risco" type="string"/>
+            <column name="flex_field_12" type="string"/>
+            <column name="flex_field_13" type="string"/>
+            <column name="flex_field_1_number" type="numeric"/>
+            <column name="flex_field_2_number" type="numeric"/>
+            <column name="flex_field_3_number" type="numeric"/>
+            <column name="flex_field_4_number" type="numeric"/>
+            <column name="flex_field_5_number" type="numeric"/>
+            <column name="status_scansys" type="string"/>
+            <column name="cod_estrutura_atual" type="numeric"/>
+            <column name="perc_tolerancia" type="numeric"/>
+            <column name="pis_especifico" type="string"/>
+            <column name="cofins_especifico" type="string"/>
+            <column name="flex_field_14" type="string"/>
+            <column name="flex_field_15" type="string"/>
+            <column name="flex_field_16" type="string"/>
+            <column name="flex_field_17" type="string"/>
+            <column name="flex_field_18" type="string"/>
+            <column name="flex_field_19" type="string"/>
+            <column name="flex_field_20" type="string"/>
+            <column name="flex_field_21" type="string"/>
+            <column name="flex_field_22" type="string"/>
+            <column name="flex_field_23" type="string"/>
+            <column name="flex_field_24" type="string"/>
+            <column name="flex_field_25" type="string"/>
+            <column name="flex_field_26" type="string"/>
+            <column name="flex_field_27" type="string"/>
+            <column name="flex_field_28" type="string"/>
+            <column name="flex_field_29" type="string"/>
+            <column name="flex_field_30" type="string"/>
+            <column name="flex_field_31" type="string"/>
+            <column name="flex_field_32" type="string"/>
+            <column name="flex_field_33" type="string"/>
+            <column name="s_cod_barras_gtin" type="string"/>
+            <column name="n_vlr_unit_limite_usd" type="numeric"/>
+            <column name="n_cod_prod_anp" type="numeric"/>
+            <column name="n_custo_producao" type="numeric"/>
+            <column name="s_destino" type="string"/>
+            <column name="n_percentual_glp" type="numeric"/>
+            <column name="n_loc_field_1" type="numeric"/>
+            <column name="n_loc_field_2" type="numeric"/>
+            <column name="n_loc_field_3" type="numeric"/>
+            <column name="n_loc_field_4" type="numeric"/>
+            <column name="n_loc_field_5" type="numeric"/>
+            <column name="n_loc_field_6" type="numeric"/>
+            <column name="n_loc_field_7" type="numeric"/>
+            <column name="n_loc_field_8" type="numeric"/>
+            <column name="s_loc_field_1" type="string"/>
+            <column name="s_loc_field_2" type="string"/>
+            <column name="s_loc_field_3" type="string"/>
+            <column name="s_loc_field_4" type="string"/>
+            <column name="s_loc_field_5" type="string"/>
+            <column name="n_id_doc_ocr" type="numeric"/>
+            <column name="s_loc_field_6" type="string"/>
+            <column name="s_loc_field_7" type="string"/>
+            <column name="s_loc_field_8" type="string"/>
+            <column name="s_loc_field_9" type="string"/>
+            <column name="s_loc_field_10" type="string"/>
+            <column name="s_loc_field_11" type="string"/>
+            <column name="s_loc_field_12" type="string"/>
+            <column name="s_loc_field_13" type="string"/>
+            <column name="s_loc_field_14" type="string"/>
+            <column name="s_loc_field_15" type="string"/>
+            <column name="s_cod_prod_anvisa" type="string"/>
+            <column name="s_desc_prod_anp" type="string"/>
+            <column name="n_perc_glp_nac" type="numeric"/>
+            <column name="n_perc_glp_imp" type="numeric"/>
+            <column name="n_valor_partida" type="numeric"/>
+            <column name="s_gtin_unid_trib" type="string"/>
+            <column name="s_codigo_modalidade" type="string"/>
+            <column name="s_codigogpc" type="string"/>
+            <column name="s_codigogpcbrick" type="string"/>
+            <column name="s_codigounspsc" type="string"/>
+            <column name="s_situacao" type="string"/>
+            <column name="s_enviado" type="string"/>
+            <column name="s_motivo_isencao_anvisa" type="string"/>
+            <column name="s_ic_pronto_para_envio" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here, do not remove-->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>
