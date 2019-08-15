@@ -153,4 +153,17 @@ public class ProductResource {
         return ResponseEntity.ok().headers(headers).body(page.getContent());
     }
 
+
+    /**
+     * {@code GET  /products/count} : get the "count" of all products.
+     *
+     * 
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the product, or with status {@code 404 (Not Found)}.
+     */
+    @GetMapping("/products/count")
+    public long getProductCount() {
+        log.debug("REST request to get Product Count ");
+         return productRepository.count();
+        
+    }
 }
